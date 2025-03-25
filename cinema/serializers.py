@@ -9,7 +9,7 @@ class GenreSerializer(serializers.ModelSerializer):
         fields = ("id", "name")
 
 
-class GenreListSerializer(serializers.ModelSerializer):
+class GenreListSerializer(GenreSerializer):
     genres = GenreSerializer(many=True, read_only=True)
 
     class Meta:
